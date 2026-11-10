@@ -1,0 +1,6 @@
+{
+  "name": "Kökedves — Bride Who Never Left",
+  "description": "An immersive digital archive of waiting, devotion, and unfinished correspondence centered around the legend of Budapest.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

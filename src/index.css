@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bodoni Moda", "Cormorant Garamond", serif;
+  --font-serif: "Cormorant Garamond", "EB Garamond", serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --color-black-abs: #08090A;
+  --color-black-mid: #0D0E10;
+  --color-charcoal: #171719;
+  --color-graphite: #333336;
+  --color-ash: #77777A;
+  --color-silver: #BDBDBB;
+  --color-paper: #F0EFEB;
+  --color-muted-white: #D6D5D1;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #08090A;
+    color: #F0EFEB;
+  }
+  
+  /* Custom subtle dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #08090A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #333336;
+    border-radius: 0px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #77777A;
+  }
+}
+
+/* Atmospheric photographic film grain effect (pure SVG noise) */
+.bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Archival letter paper subtle texture */
+.paper-texture {
+  background-color: #0D0E10;
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.015) 0%, rgba(0,0,0,0.15) 100%);
+}
+
+/* Monochromatic envelope styling */
+.envelope-shadow {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(189, 189, 187, 0.15);
+}
+
+.envelope-shadow:hover {
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.95), 0 0 1px 1px rgba(189, 189, 187, 0.35);
+}
